@@ -1,0 +1,31 @@
+
+
+#header{
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    justify-content: space-between;   
+    padding: 20px 80px;
+}
+
+
+#header>img{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    width: 15%;
+    height: 50px;   
+}
+
+/* #header>a:hover{
+    background-color: green;
+    color: rgb(131, 238, 24);
+    
+} */
+
+
+
+
+
+
+
