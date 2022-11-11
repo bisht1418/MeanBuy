@@ -1,31 +1,111 @@
-
-
-#header{
-    border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    display: flex;
-    justify-content: space-between;   
-    padding: 20px 80px;
+body{
+    background-color: rgba(128, 128, 128, 0.014);
 }
 
 
-#header>img{
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border-radius: 10px;
-    width: 15%;
-    height: 50px;   
+#container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    font-size: 16px;
+    margin:100px 50px;
 }
 
-/* #header>a:hover{
-    background-color: green;
-    color: rgb(131, 238, 24);
+#container div{
+   text-align: center;
+   text-shadow: 100px;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   padding-bottom: 20px;
+   background-color: rgb(255, 255, 255);
+}
+
+
+#container img{
+    width: 50%;
+    height: 50%;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
+
+button{
+    background-color: rgb(159, 255, 80);
+    border-radius: 10px;
+    border: none;
+}
+
+
+
+#navBar{
+    width: 90%;
+    height: auto;
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(8,2fr);
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.253);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
+#navBar>div{
+    color: rgb(221, 0, 0);
+    margin-top: 20px;
+    padding: 10px;
+}
+
+
+#navBar>div>a{
+    color: black;
+}
+
+
+#navBar>div>a:hover{
+    color: rgba(6, 16, 102, 0.575);
+    background-color: rgb(224, 245, 224);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#footer{
+    background-color: darkgray;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: space-between;
+    padding: 70px;
+    margin-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     
-} */
+}
 
+a{
+    color: rgb(255, 255, 255);    
+}
 
+#topStories{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+    background-color: rgb(255, 251, 246);
+    
+}
 
+#cart{
+    color: black;
+    background-color: rgb(209, 243, 243);
+    font-size: 20px;
+}
 
+#poster{
+    margin-top: 50px;
+    background-image: url("../images/banner_02.webp");
+    width: 100%;
+    height: 350px;
+}
 
-
-
+#search{
+    margin-top: 25px;
+    height: 25px;
+    width: 200%;
+    color: none;
+    border-radius: 10px;
+    box-shadow: none;
+}
