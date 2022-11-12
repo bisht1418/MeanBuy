@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Detail</title>
+
+    <style>
+        *{
+            text-align: center;
+        }
+
+        body{
+    background-color: rgba(128, 128, 128, 0.014);
+}
+
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    font-size: 15px;
+    margin:100px 50px;
+}
+
+#container div{
+   text-align: center;
+   text-shadow: 100px;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   padding-bottom: 50px;
+   background-color: rgb(255, 255, 255);
+}
+
+
+#container img{
+    width: 50%;
+    height: 40%;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+}
+
+button{
+    background-color: rgb(159, 255, 80);
+    border-radius: 10px;
+    border: none;
+}
+
+
+
+#navBar{
+    width: 98%;
+    height: auto;
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(8,2fr);
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.253);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+}
+
+#navBar>div{
+    color: rgb(221, 0, 0);
+    margin-top: 20px;
+    padding: 10px;
+}
+
+
+#navBar>div>a{
+    color: black;
+}
+
+
+#navBar>div>a:hover{
+    color: rgba(6, 16, 102, 0.575);
+    background-color: rgb(224, 245, 224);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#footer{
+    background-color: darkgray;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: space-between;
+    padding: 70px;
+    margin-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
+}
+
+a{
+    color: rgb(255, 255, 255);    
+}
+
+#topStories{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+    background-color: rgb(255, 251, 246);
+    
+}
+
+#cart{
+    color: black;
+    background-color: rgb(209, 243, 243);
+    font-size: 20px;
+}
+
+#poster{
+    margin-top: 50px;
+    background-image: url("../images/banner_02.webp");
+    width: 100%;
+    height: 350px;
+}
+
+#search{
+    margin-top: 25px;
+    height: 25px;
+    width: 200%;
+    color: none;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+button{
+    padding: 10px;
+    font-weight: 500px;
+    border-radius: 10px;
+ }
+
+ button:hover{
+    background-color: rgb(255, 197, 126);
+ }
+
+#image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    top: -15px;
+}
+
+body{
+    background-color: rgb(232, 249, 255);
+}
+
+#check div{
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin: 50px auto;
+ 
+}
+
+#check img{
+    width: 70%;
+    border-radius: 10px;
+}
+
+#click{
+    position: relative;
+    top: -40px;
+}
+
+
+
+
+
+
+    </style>
+
+</head>
+<body>
+
+
+ <!-- navigation bar -->
+
+    <div id="navBar">
+
+        <div id="image">
+            <img src="../images/final logo.png" alt="">
+        </div>
+        
+        <div>
+            <a href="../index.html" class="">HOME</a>
+        </div>
+        <div>
+            <a href="./index.html" class="">SHOP</a>
+        </div>
+        <div>
+            <a href="./index.html" class="">BLOG</a>
+        </div>
+        <div>
+            <a href="../pages/register.html" class="">REGISTER</a>
+        </div>
+       
+        <div>
+            <a href="../pages/cart.html" class="">MY CART</a>
+        </div>
+
+        <input type="text" id="search" placeholder="Search Here">
+
+       
+    </div>
+
+ <!-- navigation bar -->
+
+    <h1>CHECKOUT PAGE</h1>
+
+    <div id="check">
+
+    </div>
+
+    <button id="click">Order Your Product Please</button>
+
+
+
+<!-- footer -->
+    <div id="footer">
+        <div>
+            <h3>OUR POLICIES</h3>
+            <a href="./pages/policy.html">Privicy Policy</a>
+            <br>
+            
+            <a href="./pages/return.html">Return Policy</a>
+            <br>
+
+            <a href="./pages/use.html">Terms of use</a>
+            <br>
+
+            <a href="./pages/security.html">Security</a>
+            <br>
+            
+            <a href="./pages/policy.html">Privicy Policy</a>
+            <br>
+
+        </div>
+
+
+        <div>
+            <h3>HELP</h3>
+            <a href="./pages/policy.html">Payment</a>
+            <br>
+            
+            <a href="./pages/return.html">Shipping</a>
+            <br>
+
+            <a href="./pages/use.html">Cancellation adn return</a>
+            <br>
+
+            <a href="./pages/security.html">FAQs</a>
+            <br>
+            
+            <a href="./pages/policy.html">Report Infriengment</a>
+            <br>
+
+        </div>
+
+        <div>
+            <h3>SELL WITH US</h3>
+            <a href="./pages/policy.html">General Information</a>
+            <br>
+            
+            <a href="./pages/return.html">Sign Up</a>
+            <br>
+            
+            <a href="./pages/return.html">Join as a seller</a>
+            <br>
+
+        
+        </div>
+
+        <div>
+            <h3>SOCIAL</h3>
+            <a href="./pages/policy.html">Facebook</a>
+            <br>
+            
+            <a href="./pages/return.html">Instagram</a>
+            <br>
+
+            <a href="./pages/use.html">Twitter</a>
+            <br>
+
+            <a href="./pages/security.html">Youtube</a>
+            <br>
+        
+
+        </div>
+
+
+        <div>
+           <img src="./images/logo.png" alt=""><br>
+           <img width="100pxpx" src="./images/instagram.jfif" alt="">
+           <img width="100pxpx" src="./images/facebook.jfif" alt="">
+
+        </div>
+
+
+    </div>
+<!-- footer -->
+
+
+    
+</body>
+</html>
+
+<script>
+
+
+console.log("Neeraj")
+
+let myDiv = document.querySelector("#check")
+let myCheck = JSON.parse(localStorage.getItem("checkOut"))
+
+
+        let div = document.createElement("div")
+
+        let img = document.createElement("img")
+        img.setAttribute("src",myCheck.img)
+
+        let brand = document.createElement("h2")
+        brand.innerText = myCheck.brand
+
+        let price = document.createElement("h3")
+        price.innerText = myCheck.price
+
+        let detail = document.createElement("p")
+        detail.innerText = myCheck.details
+
+        let Category= document.createElement("p")
+        Category.innerText = myCheck.category
+   
+        div.append(img,brand,price,detail,Category)
+        myDiv.append(div)
+
+      
+
+
+</script>

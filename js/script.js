@@ -42,12 +42,17 @@
 
         let button = document.createElement("button")
         button.innerText = "Add to Cart"
-        button.addEventListener("click", ()=>{
-
-         
-            cart.push(element)
-            localStorage.setItem("cart",JSON.stringify(cart))
-        })
+        button.addEventListener("click",()=>{
+          for(let i=0; i<cart.length; i++){
+            if(cart[i].id===element.id){
+              alert("Product is already available")
+              return
+            }
+          }
+          cart.push({...element,quantity:1})         
+          localStorage.setItem("cart",JSON.stringify(cart))
+          alert("Item added to cart")
+        })  
 
         div.append(img,brand,price,detail,Category,button)
         myDiv.append(div)
@@ -56,4 +61,6 @@
 
     }  
   
+
+
    

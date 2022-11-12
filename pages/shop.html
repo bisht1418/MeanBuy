@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Now</title>
+
+    <style>
+        body{
+            background-color: rgba(128, 128, 128, 0.014);
+        }
+
+
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 30px;
+            font-size: 15px;
+            margin:100px 50px;
+        }
+
+        #container div{
+        text-align: center;
+        text-shadow: 100px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding-bottom: 50px;
+        background-color: rgb(255, 255, 255);
+        }
+
+
+        #container img{
+            width: 50%;
+            height: 40%;
+            /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+        }
+
+        button{
+            background-color: rgb(159, 255, 80);
+            border-radius: 10px;
+            border: none;
+        }
+
+
+
+        #navBar{
+            width: 98%;
+            height: auto;
+            /* border: 1px solid black; */
+            display: grid;
+            grid-template-columns: repeat(8,2fr);
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.253);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+        }
+
+        #navBar>div{
+            color: rgb(221, 0, 0);
+            margin-top: 20px;
+            padding: 10px;
+        }
+
+
+        #navBar>div>a{
+            color: black;
+        }
+
+
+        #navBar>div>a:hover{
+            color: rgba(6, 16, 102, 0.575);
+            background-color: rgb(224, 245, 224);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #footer{
+            background-color: darkgray;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            justify-content: space-between;
+            padding: 70px;
+            margin-bottom: 50px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            
+        }
+
+        a{
+            color: rgb(255, 255, 255);    
+        }
+
+        #topStories{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding: 10px;
+            background-color: rgb(255, 251, 246);
+            
+        }
+
+        #cart{
+            color: black;
+            background-color: rgb(209, 243, 243);
+            font-size: 20px;
+        }
+
+        #poster{
+            margin-top: 50px;
+            background-image: url("../images/banner_02.webp");
+            width: 100%;
+            height: 350px;
+        }
+
+        #search{
+            margin-top: 25px;
+            height: 25px;
+            width: 200%;
+            color: none;
+            border-radius: 10px;
+            box-shadow: none;
+        }
+
+        button{
+            padding: 10px;
+            font-weight: 500px;
+            border-radius: 10px;
+        }
+
+        button:hover{
+            background-color: rgb(255, 197, 126);
+        }
+
+        #image img{
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            position: relative;
+            top: -15px;
+        }
+
+        h1{
+            color: darkcyan;
+            /* position: relative;
+            right: -100px; */
+            text-align: center;
+        }
+
+
+    </style>
+    
+</head>
+<body>
+
+<!-- navigation bar -->
+
+    <div id="navBar">
+
+        <div id="image">
+            <img src="../images/final logo.png" alt="">
+        </div>
+        
+        <div>
+            <a href="../index.html" class="">HOME</a>
+        </div>
+        <div>
+            <a href="./shop.html" class="">SHOP</a>
+        </div>
+        <div>
+            <a href="./index.html" class="">BLOG</a>
+        </div>
+        <div>
+            <a href="./pages/register.html" class="">REGISTER</a>
+        </div>
+       
+        <div>
+            <a href="./cart.html" class="">MY CART</a>
+        </div>
+
+        <input type="text" id="search" placeholder="Search Here">
+
+       
+    </div>
+
+<!-- navigation bar -->
+
+    <h1>Add Your Fav Item in Your Cart</h1>
+
+    <div id="container"></div>
+  
+</body>
+</html>
+
+<script>
+
+let myDiv = document.querySelector("#container")
+    let noMultiData = JSON.parse(localStorage.getItem("cart"))
+    let cart = JSON.parse(localStorage.getItem("cart"))||[]
+    let bag = []
+
+    let url = "https://dbioz2ek0e.execute-api.ap-south-1.amazonaws.com/mockapi/get-tech-products"
+
+    fetch(url).then((res)=>res.json())
+              .then((data)=>{
+                let x = data.data
+                bag = x
+                console.log(bag)
+                displayData(x)             
+              })
+            
+
+    function displayData(data){
+
+        myDiv.innerHTML = null
+
+        data.forEach(function(element){
+
+        let div = document.createElement("div")
+
+        let img = document.createElement("img")
+        img.setAttribute("src",element.img)
+
+        let brand = document.createElement("h2")
+        brand.innerText = element.brand
+
+        let price = document.createElement("h3")
+        price.innerText = element.price
+
+        let detail = document.createElement("p")
+        detail.innerText = element.details
+
+        let Category= document.createElement("p")
+        Category.innerText = element.category
+
+        let button = document.createElement("button")
+        button.innerText = "Add to Cart"
+        button.addEventListener("click",()=>{
+          for(let i=0; i<cart.length; i++){
+            if(cart[i].id===element.id){
+              alert("Product is already available")
+              return
+            }
+          }
+          cart.push({...element,quantity:1})         
+          localStorage.setItem("cart",JSON.stringify(cart))
+          alert("Item added to cart")
+        })  
+
+        div.append(img,brand,price,detail,Category,button)
+        myDiv.append(div)
+
+      })
+
+    }  
+  
+    
+
+
+</script>
