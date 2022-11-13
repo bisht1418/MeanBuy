@@ -191,7 +191,7 @@
 
 <script>
 
-let myDiv = document.querySelector("#container")
+    let myDiv = document.querySelector("#container")
     let noMultiData = JSON.parse(localStorage.getItem("cart"))
     let cart = JSON.parse(localStorage.getItem("cart"))||[]
     let bag = []
@@ -201,8 +201,7 @@ let myDiv = document.querySelector("#container")
     fetch(url).then((res)=>res.json())
               .then((data)=>{
                 let x = data.data
-                bag = x
-                console.log(bag)
+                bag = x                
                 displayData(x)             
               })
             
@@ -250,7 +249,19 @@ let myDiv = document.querySelector("#container")
       })
 
     }  
-  
+
+   
+    search.addEventListener("input",()=>{
+
+        let search = document.querySelector("#search")
+        let x = search.value
+        let newData = bag.filter(function(element){
+            return element.category.includes(x).toLowerCase() == include(x).toLowerCase()
+        })
+        displayData(newData)
+
+    })
+
     
 
 

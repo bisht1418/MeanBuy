@@ -6,7 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login page</title>
     <link rel="stylesheet" href="../css/login.css">
+    <style>
+         body{
+            background-color: rgb(255, 244, 244);
+        }
 
+        #myForm{
+            background-color: blanchedalmond;
+            width: 40%;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            margin: 0px auto;
+            gap: 20px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: rgb(0, 255, 255);
+            position: relative;
+            top: 10px;
+        }
+
+        #myForm input {
+         font-size: 20px;
+         border-radius: 10px;
+         border-color: white;
+        }
+
+        #myForm input:hover{
+         background-color: rgb(242, 255, 223);
+         cursor: pointer;
+        }
+
+        h2{
+            position: relative;
+            right: -400px;
+            top: -310px;
+            color: rgb(11, 0, 105);
+        }
+        h4{           
+            color: rgb(11, 0, 105);
+        }
+
+
+
+    </style>
 </head>
 <body>
 
@@ -39,57 +82,34 @@
        
     </div>
 <!-- navigation bar -->
-
-
-    <div id="container">
-
-        <div id="upperBody">
-            <div><img src="./image/my_logo.jpg"/></div>
-            <div>
-                 <h1>Login</h1>
-                 <h5>Login to your Cart Express profil<h5> 
-            </div>  
-                   
+   
+    <div id="myLogin">
+        <div>
+            <form id="myForm">
+                <h4>Please fill this form to create account</h4><br>
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+                <input type="Email" placeholder="Email" required><br>
+                <input type="password" placeholder="Password" required><br>
+                <input type="submit" placeholder="submit">
+            </form>           
         </div>
-
-
-        <div id="middleBody">
-            <form>
-                <label for="username">Email</label><br>
-                <input type="email" placeholder="your email" required><br>
-
-                <label for="password">Password</label><br>
-                <input type="password" placeholder="your password" required><br>
-
-
-                <div id="buttonPart">
-                    <button>Login</button>
-                    <a href="Forget your passsword">Forget your passsword</a>
-
-                </div>
-            </form>
-            
-
-        </div>
-
-
-        <div id="lowerBody">
-
-            <div>
-                <h5>Don't have an account?</h5>
-                <a href="signup">Sign Up</a>
-            </div>
-            <div>
-                <h5>Trouble Logging in??</h5>
-                <a href="signup">Try Alternative Way</a>
-            </div>
-            <a href="signup">Terms of Service</a>
-
-        </div>
-
-       
-
     </div>
+    <h2>Sign Up</h1><br>
+
+
+
     
 </body>
 </html>
+
+<script>
+    let btn = document.querySelector("#myForm")
+    btn.addEventListener("submit",(event)=>{
+        event.preventDefault()
+        alert("account sucessfully created")
+        window.location.href = "./loginSucessful.html"
+    })
+
+
+</script>

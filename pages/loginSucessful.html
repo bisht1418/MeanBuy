@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login Sucessful</title>
+    <style>
+        h1{
+            color: darkviolet;
+            position: relative;
+            top: -800px;
+            right: -410px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <img width="100%" src="../images/account_successfully_created2_4x.webp" alt="">
+    <h1>Your account is Sucessfully created</h1>
+
+
+
+
+    
+</body>
+</html>
+
+<script>
+
+
+    function waitPromise(time){
+    let myPromise = new Promise((resolve,reject)=>{
+        setTimeout(function(){
+            resolve("Account Sucessfully Created")
+        },time)
+    })
+    return myPromise
+    }
+    waitPromise(3000).then((fromResolve)=>window.location.href = "../index.html")
+
+
+
+</script>
