@@ -193,7 +193,7 @@ body{
             <a href="./index.html" class="">BLOG</a>
         </div>
         <div>
-            <a href="../pages/register.html" class="">REGISTER</a>
+            <a href="./pages/register.html" class="">REGISTER/LOGIN</a>
         </div>
        
         <div>
@@ -214,8 +214,6 @@ body{
     </div>
 
     <button id="click">Order Your Product Please</button>
-
-
 
 <!-- footer -->
     <div id="footer">
@@ -334,6 +332,11 @@ let myCheck = JSON.parse(localStorage.getItem("checkOut"))
    
         div.append(img,brand,price,detail,Category)
         myDiv.append(div)
+
+        let btn = document.querySelector("#click")
+        btn.addEventListener("click",()=>{
+            window.location.href="./payment.html"
+        })
 
       
 
