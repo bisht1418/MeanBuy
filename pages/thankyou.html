@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thankyou</title>
+    <style>
+        *{
+            text-align: center;
+            background-color: bisque;
+            color: rgb(0, 43, 43);
+        }
+
+        div{
+            margin: 20px 0px;
+        }
+
+        h1{
+            color: rgb(120, 143, 36);
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>YOUR ORDER IS CONFIRM...</h1>
+        <img width="50%" src="../images/thank_you_card_maker_app01.jpg" alt="">
+        <h2>YOUR POODUCT IS PROCESSED NOW</h2>
+        <h3>WE WILL REACHED TO YOU BY MAIL FOR FURTHER UPDATE</h3>
+        <h1>THANK-YOU FOR YOUR ORDER</h1>
+    </div>
+    
+    
+</body>
+</html>
+
+<script>
+
+function waitPromise(time){
+
+let myPromise = new Promise((resolve,reject)=>{
+    setTimeout(function(){
+        resolve("Payment Done")
+    },time)
+})
+return myPromise
+}
+waitPromise(2000).then((fromResolve)=>window.location.href = "../index.html")
+
+
+
+</script>

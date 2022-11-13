@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment</title>
+    <style>
+
+        body{
+            background-color: beige;
+        }
+     
+        h1{
+            color: rgb(0, 0, 0);
+            text-align: center;            
+        }
+
+        h3{
+            color: rgb(214, 0, 0);
+            font-size: 30px;                    
+        }
+
+        #container{  
+            /* border: 1px solid black;           */
+            width: 60%;
+            font-size: 30px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            justify-content: space-between;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 30px;
+
+        }
+
+        #address input{
+        
+            font-size: 20px;
+            border-radius: 10px; 
+            padding: 2px 0px;
+            margin: 10px;          
+        }
+
+        #address input #myadd{
+        
+            font-size: 20px;
+            border-radius: 10px; 
+            padding: 100px 0px;
+            margin: 10px;          
+        }
+
+        #payment input{
+        
+            font-size: 20px;
+            border-radius: 10px; 
+            padding: 2px 0px;
+            margin: 10px;          
+        }
+
+        #myadd{
+            padding:100px 0px;        
+        }
+        
+        button{
+            border-radius: 10px;
+            padding: 5px;
+            position: relative;
+            left: 38%;
+        }
+
+        button:hover{
+            background-color: rgb(189, 255, 255);
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Pay Here</h1>
+
+    <div id="container">
+        <div id="address">
+            <h3>Billing Address Please</h3>
+            <input type="text" placeholder="your name" required><br>
+            <input type="email" placeholder="your email" required><br>
+            <input id="myadd" type="text" placeholder="your Address" required><br>
+            <input type="text" placeholder="your city" required><br>
+            <input type="text" placeholder="your state" required><br>
+            <input type="number" placeholder="your pin" required><br>
+        </div>
+
+        <div id="payment">
+            <h3>Payment Detail</h3>
+            <img src="../images/card_img.png" alt=""><br>
+            <input type="text" placeholder="Name on Card" required><br>
+            <input type="text" placeholder="Debit/Credit Number" required><br>
+            <input type="text" placeholder="exp-month" required>
+            <input type="text" placeholder="year" required><br>
+            <input type="text" placeholder="otp" required><br>           
+        </div>
+
+    </div>
+    <button>Click to complete your order</button>
+
+
+</body>
+</html>
+
+<script>
+
+    let btn = document.querySelector("button")
+    btn.addEventListener("click",()=>{
+        window.location.href = "./thankyou.html"
+    })
+
+
+</script>
